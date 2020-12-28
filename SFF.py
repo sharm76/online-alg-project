@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
-import matplotlib.pyplot as plt
-import numpy as np
 import random
 
 class Bin:
@@ -84,7 +81,7 @@ def addItemToBin(new_item):
 
 try:
     isValid = True
-    for x in range(10):
+    for x in range(10000):
         item_size = random.randint(1, 10)
         item_color = random.randint(1, 9)
         try:
@@ -105,8 +102,8 @@ try:
             for item in shelves.item_list:
                 print(item);
 
-    
-    print("Area(OPT): ",str(area_opt));
     print("Area(ALG): ",str(total_height*10));
+    print("Area(OPT): ",str(area_opt));
+    print("CR: ", str((total_height*10)/area_opt))
 except:
     print("An exception occurred")
